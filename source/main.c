@@ -98,7 +98,7 @@ int _main(struct thread *td) {
   memset_s(&nthread, sizeof(ScePthread), 0, sizeof(ScePthread));
   scePthreadCreate(&nthread, NULL, nthread_func, NULL, "nthread");
 
-  printf_notification("Running Kernel Dumper");
+  printf_notification("Running Kernel Dumper\nPS4 Firmware %s", fw_version);
 
   snprintf_s(notify_buf, sizeof(notify_buf), "Waiting for USB device...");
   wait_for_usb(usb_name, usb_path);
